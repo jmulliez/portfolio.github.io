@@ -40,7 +40,7 @@ nav ul li {
 .nav-btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #c0c5ca;
+    background-color: #aeafaf;
     color: #000000;
     text-decoration: none;
     border-radius: 5px;
@@ -54,13 +54,26 @@ nav ul li {
     background-color: #0056b3; /* Nouvelle couleur au survol */
     transform: scale(1.1); /* Légère augmentation de la taille */
 }
-
-/* Style spécifique pour le bouton actif */
-.nav-btn.active {
-    background-color: #ff0000; /* Couleur différente pour le bouton actif */
-    color: #ffffff; /* Couleur du texte */
-    /* Autres styles si nécessaire */
+/* Style pour les boutons de navigation */
+.nav-cpt {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0a4581;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center; /* Centrer le texte */
+    line-height: 1.5; /* Hauteur de ligne pour centrer verticalement */
 }
+
+/* Style pour le survol des boutons */
+.nav-cpt:hover {
+    background-color: #0056b3; /* Nouvelle couleur au survol */
+    transform: scale(1.1); /* Légère augmentation de la taille */
+}
+
+
 
 .profile {
     display: flex;
