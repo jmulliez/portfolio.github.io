@@ -81,7 +81,7 @@ nav ul li {
     justify-content: center;
     align-items: center;
     padding: 50px 20px;
-    background-image: url('ete-2.jpg'); 
+    background-image: url('../assets/images/ete-2.jpg');    
     background-size: cover;
     background-position: center;
     text-align: center;
