@@ -1,9 +1,342 @@
+/* Timeline moderne pour le parcours académique */
+.timeline {
+    position: relative;
+    margin: 0 auto;
+    padding: 0 0 0 30px;
+    max-width: 600px;
+    list-style: none;
+}
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, #1976d2 0%, #43e97b 100%);
+    border-radius: 2px;
+    opacity: 0.18;
+}
+.timeline .event {
+    position: relative;
+    background: #fff;
+    border-radius: 12px;
+    margin-bottom: 32px;
+    padding: 18px 28px 18px 32px;
+    box-shadow: 0 2px 12px 0 rgba(30,34,54,0.07);
+    border-left: 4px solid #1976d2;
+    transition: box-shadow 0.2s;
+    text-align: left;
+    align-items: flex-start;
+}
+.timeline .event:hover {
+    box-shadow: 0 6px 24px 0 rgba(30,34,54,0.13);
+    border-left: 4px solid #43e97b;
+}
+.timeline .event::before {
+    content: '';
+    position: absolute;
+    left: -22px;
+    top: 24px;
+    width: 16px;
+    height: 16px;
+    background: linear-gradient(135deg, #1976d2 60%, #43e97b 100%);
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 8px 0 rgba(30,34,54,0.10);
+}
+.timeline .event:last-child {
+    margin-bottom: 0;
+}
+.timeline .event-title {
+    font-size: 1.15em;
+    font-weight: 700;
+    color: #1976d2;
+    margin-bottom: 2px;
+}
+.timeline .event-place {
+    font-size: 1em;
+    color: #5a6d8c;
+    margin-bottom: 2px;
+}
+.timeline .date {
+    font-size: 0.98em;
+    color: black;
+    font-weight: 1000;
+}
+@media (max-width: 600px) {
+  .timeline {
+    padding-left: 10px;
+  }
+  .timeline .event {
+    padding: 14px 10px 14px 22px;
+  }
+  .timeline .event::before {
+    left: -16px;
+    top: 18px;
+    width: 12px;
+    height: 12px;
+  }
+}
+/* Sous-titre header */
+.subtitle {
+    font-size: 1.1em;
+    color: #b0b8d8;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+/* Flex pour la section profile */
+.profile-flex {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.profile-info {
+    min-width: 220px;
+    max-width: 400px;
+    text-align: left;
+    background: rgba(30,34,54,0.15);
+    padding: 24px 28px;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px 0 rgba(30,34,54,0.08);
+}
+.profile-info h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+}
+.profile .pp {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 4px solid #4CAF50;
+    object-fit: cover;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.18);
+}
+
+/* Timeline parcours académique */
+.timeline {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 600px;
+}
+.timeline .event {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #f6f8fb;
+    border-radius: 16px;
+    margin-bottom: 28px;
+    padding: 18px 28px;
+    box-shadow: 0 2px 12px 0 rgba(30,34,54,0.07);
+    border-left: 4px solid #1976d2;
+    transition: box-shadow 0.2s;
+    position: relative;
+}
+.timeline .event:hover {
+    box-shadow: 0 6px 24px 0 rgba(30,34,54,0.13);
+    border-left: 4px solid #43e97b;
+}
+.timeline .event-icon {
+    flex: 0 0 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 22px;
+}
+.timeline .event-icon img {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 2px 8px 0 rgba(30,34,54,0.10);
+    background: #fff;
+    border: 2px solid #e3eafc;
+}
+.timeline .event-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.event-title {
+    font-weight: 800;
+    font-size: 1.22em;
+    color: #001a33;
+    margin-bottom: 2px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: color 0.2s;
+}
+.timeline .event:hover .event-title {
+    color: #00994d;
+}
+.event-place {
+    font-size: 1em;
+    color: #111;
+    margin-bottom: 2px;
+    font-style: italic;
+    letter-spacing: 0.1px;
+}
+.date {
+    display: inline-block;
+    font-size: 0.98em;
+    color: #fff;
+    background: linear-gradient(90deg, #003366 60%, #00994d 100%);
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 2px 12px;
+    margin-top: 4px;
+    box-shadow: 0 1px 4px 0 rgba(30,34,54,0.07);
+    letter-spacing: 0.2px;
+    transition: background 0.2s;
+}
+.timeline .event:hover .date {
+    background: linear-gradient(90deg, #00994d 60%, #003366 100%);
+}
+
+/* Compétences */
+.skills-flex {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 18px;
+}
+.skill {
+    background: rgba(255,255,255,0.08);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px 0 rgba(30,34,54,0.06);
+    padding: 18px 12px 10px 12px;
+    min-width: 180px;
+    max-width: 220px;
+    text-align: center;
+}
+.skill img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+.skill h3 {
+    font-size: 1.1em;
+    margin: 0;
+}
+
+/* Centres d'intérêt */
+.interests {
+    margin-top: 32px;
+}
+.interest {
+    display: inline-block;
+    vertical-align: top;
+    background: rgba(255,255,255,0.08);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px 0 rgba(30,34,54,0.06);
+    margin: 10px;
+    padding: 16px 12px 10px 12px;
+    max-width: 260px;
+    min-width: 180px;
+    text-align: center;
+}
+.interest img {
+    width: 100px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+/* Contact section */
+.contact-flex {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+.contact-info {
+    min-width: 220px;
+    max-width: 320px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px 0 rgba(30,34,54,0.06);
+    padding: 18px 22px;
+    margin-bottom: 18px;
+}
+.contact-info a {
+    color: #4CAF50;
+    text-decoration: none;
+    word-break: break-all;
+}
+.contact-form {
+    min-width: 220px;
+    max-width: 340px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px 0 rgba(30,34,54,0.06);
+    padding: 18px 22px;
+}
+.contact-form label {
+    font-size: 1em;
+    color: #b0b8d8;
+    margin-bottom: 2px;
+    display: block;
+}
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1.5px solid #2e3a5e;
+    border-radius: 6px;
+    background: rgba(255,255,255,0.13);
+    color: #eaf0fa;
+    font-size: 1em;
+    font-family: inherit;
+    resize: vertical;
+}
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background: #2e3a5e;
+    font-weight: 500;
+    border: 1.5px solid #4CAF50;
+    border-radius: 8px;
+    color: #fff;
+    transition: background 0.2s, color 0.2s, border 0.2s, transform 0.2s;
+    cursor: pointer;
+}
+.contact-form button:hover {
+    background: #4CAF50;
+    color: #fff;
+    border-color: #2e3a5e;
+    transform: scale(1.04);
+}
+
+@media (max-width: 900px) {
+  .profile-flex, .skills-flex, .contact-flex {
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+  }
+  .profile-info, .contact-info, .contact-form, .skill, .interest {
+    max-width: 98vw;
+    min-width: 0;
+  }
+}
 Move to css/
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
-    color: #fff;
-    background-color: #1a1a1a;
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    font-size: 17px;
+    letter-spacing: 0.01em;
+    line-height: 1.7;
+    background: linear-gradient(120deg, #1a2233 0%, #2b3a55 100%);
+    color: #e6f0fa;
+    min-height: 100vh;
+    box-sizing: border-box;
 }
 
 header {
@@ -128,7 +461,7 @@ nav ul li {
 .timeline {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     gap: 20px;
 }
 

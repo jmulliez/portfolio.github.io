@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <!-- Google Fonts Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Portfolio de Joseph Mulliez, étudiant en informatique à l'IUT de Lannion. Découvrez mon parcours, mes compétences et mes projets.">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
@@ -8,65 +11,86 @@
 </head>
 <body>
     <header>
-        <h1>PORTFOLIO</h1>
-        <nav>
+        <h1>Joseph Mulliez</h1>
+        <p class="subtitle">Étudiant en informatique à l'IUT de Lannion</p>
+        <nav aria-label="Navigation principale">
             <ul>
-                <li><a href="index.html" class="nav-btn">Acceuil</a></li>
+                <li><a href="index.html" class="nav-btn" aria-current="page">Accueil</a></li>
                 <li><a href="Etudes.html" class="nav-btn">Études</a></li>
                 <li><a href="projets.html" class="nav-btn">Projets</a></li>
                 <li><a href="Contact.html" class="nav-btn">Contact</a></li>
             </ul>
         </nav>
-        
     </header>
    
     <section class="profile">
-    <img src="../assets/images/pp.jpg" alt="Joseph Mulliez" class="pp">
+    <div class="profile-flex">
+        <img src="../assets/images/pp.jpg" alt="Portrait de Joseph Mulliez" class="pp" loading="lazy">
         <div class="profile-info">
-            <h2>Joseph Mulliez</h2>
-            <h3>Mon profil</h3>
-            <p>J'ai intégré l'IUT de Lannion en 2023 à la suite d'un BAC général avec les spécialités Mathématiques et NSI au lycée naval de Brest. </p>
+            <h2>Bienvenue sur mon portfolio</h2>
+            <p>Étudiant passionné par l'informatique, je poursuis actuellement un BUT à l'IUT de Lannion après un BAC général (Maths & NSI) au lycée naval de Brest. Découvrez mon parcours, mes compétences et mes projets !</p>
         </div>
+    </div>
     </section>
     
     <section class="studies">
-        <h2>ÉTUDES</h2>
-        <div class="timeline">
-            <div class="event">
-                
-                <p>BAC général au lycée naval de Brest</p>
-                <span class="date"> ----->   2021 - 2023</span>
-            </div>
-            <div class="event">
-                
-                <p>BUT informatique à l'IUT de Lannion</p>
-                <span class="date">----->  2023 - Aujourd'hui</span>
-            </div>
-            <div class="event">
-                
-                <p>ENSTA Bretagne à Brest</p>
-                <span class="date">----->  mon projet après le BUT</span>
-            </div>
-        </div>
+        <h2>Parcours académique</h2>
+        <ol class="timeline" aria-label="Parcours académique">
+            <li class="event">
+                <div class="event-icon"><img src="../assets/images/kheuneu.jpg" alt="Lycée Naval" loading="lazy"></div>
+                <div class="event-content">
+                    <span class="event-title">BAC général</span>
+                    <span class="event-place">Lycée naval de Brest</span>
+                    <span class="date">2021 - 2023</span>
+                </div>
+            </li>
+            <li class="event">
+                <div class="event-icon"><img src="../assets/images/iut.webp" alt="BUT Informatique" loading="lazy"></div>
+                <div class="event-content">
+                    <span class="event-title">BUT Informatique</span>
+                    <span class="event-place">IUT de Lannion</span>
+                    <span class="date">2023 - Aujourd'hui (3ème année)</span>
+                </div>
+            </li>
+            <li class="event">
+                <div class="event-icon"><img src="../assets/images/Orano.webp" alt="Stage ORANO" loading="lazy"></div>
+                <div class="event-content">
+                    <span class="event-title">Stage de 3 mois</span>
+                    <span class="event-place">ORANO</span>
+                    <span class="date">Avril 2025 - Juin 2025</span>
+                </div>
+            </li>
+            <li class="event">
+                <div class="event-icon"><img src="../assets/images/Orano.webp" alt="Alternance ORANO" loading="lazy"><img src="../assets/images/iut.webp" alt="Alternance ORANO" loading="lazy"></div>
+                <div class="event-content">
+                    <span class="event-title">BUT Informatique 3ème année en alternance</span>
+                    <span class="event-place">ORANO (alternance)</span>
+                    <span class="date">Depuis Septembre 2025</span>
+                </div>
+            </li>
+        </ol>
     </section>
     
     <section class="skills">
-        <div class="skill">
-            <img src="../assets/images/autonomy.png" alt="Travail en autonomie">
-            <h3>TRAVAIL EN AUTONOMIE</h3>
-        </div>
-        <div class="skill">
-            <img src="../assets/images/web-development.png" alt="Développement web et applications">
-            <h3>DÉVELOPPEMENT WEB ET APPLICATIONS</h3>
-        </div>
-        <div class="skill">
-            <img src="../assets/images/teamwork.png" alt="Travaux de groupe et gestion de projets">
-            <h3>TRAVAUX DE GROUPE ET GESTION DE PROJETS</h3>
+        <h2>Compétences</h2>
+        <div class="skills-flex">
+            <div class="skill">
+                <img src="../assets/images/autonomy.png" alt="Travail en autonomie" loading="lazy">
+                <h3>Travail en autonomie</h3>
+            </div>
+            <div class="skill">
+                <img src="../assets/images/web-development.png" alt="Développement web et applications" loading="lazy">
+                <h3>Développement web & applications</h3>
+            </div>
+            <div class="skill">
+                <img src="../assets/images/teamwork.png" alt="Travaux de groupe et gestion de projets" loading="lazy">
+                <h3>Travail en équipe & gestion de projet</h3>
+            </div>
         </div>
     </section>
     
     <section class="interests">
-        <h2>Mes centres d'intérêt</h2>
+    <h2>Centres d'intérêt</h2>
         <div class="interest">
             <img src="../assets/images/coding.jpg" alt="Coding">
             <p>Le monde de l'informatiqe: <br> j'ai découvert le monde de l'informatique durant mon collège quand j'ai commencé à refléchir à mes années futures au lycée. J'ai donc discuter avec des membres de ma famille qui travaillent dans une multitudes de domaines professionnels différents.</p>
@@ -100,28 +124,30 @@
     </section>
     
     <section class="contact">
-        <h2>Contactez-moi</h2>
-        <form>
+        <h2>Contact</h2>
+        <div class="contact-flex">
             <div class="contact-info">
-                <p>&#128222; 0695120981</p>
-                <p>&#9993; mulliezjoseph5@gmail.com</p>
-               <h2><a href="../assets/pdf/Joseph.pdf"><strong>Voir mon CV</strong></a></h2>
-                <p><a href="#">Joseph Mulliez</a></p>
+                <p><strong>Téléphone :</strong> <a href="tel:0695120981">0695120981</a></p>
+                <p><strong>Email :</strong> <a href="mailto:mulliezjoseph5@gmail.com">mulliezjoseph5@gmail.com</a></p>
+                <p><a href="../assets/pdf/Joseph.pdf" class="nav-btn" target="_blank">Voir mon CV</a></p>
             </div>
-            <div class="contact-form">
-                <input type="text" name="prenom" placeholder="Prénom">
-                <input type="text" name="nom" placeholder="Nom de famille">
-                <input type="email" name="email" placeholder="E-mail *">
-                <textarea name="message" placeholder="Rédigez un message"></textarea>
+            <form class="contact-form" autocomplete="on">
+                <label for="prenom">Prénom</label>
+                <input type="text" id="prenom" name="prenom" placeholder="Prénom" required>
+                <label for="nom">Nom de famille</label>
+                <input type="text" id="nom" name="nom" placeholder="Nom de famille" required>
+                <label for="email">E-mail *</label>
+                <input type="email" id="email" name="email" placeholder="E-mail *" required>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Rédigez un message" required></textarea>
                 <button type="submit">Envoyer</button>
-            </div>
-        </form>
+            </form>
+        </div>
     </section>
     
     <footer>
-        <p>Mon Portfolio</p>
-        <p>&copy; Réalisation : Joseph Mulliez </p>
-            <p> date de création : 2024</p>
+        <p>Portfolio de Joseph Mulliez</p>
+        <p>&copy; 2024 - Tous droits réservés</p>
     </footer>
 </body>
 </html>
